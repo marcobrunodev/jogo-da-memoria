@@ -19,5 +19,7 @@ function createCardsWrapper() {
 
   $head.insertBefore($style, null);
 
+  console.log("Dentro do card-wrapper, esse aquivo só tem uma function");
+
   return $cardsWrapper;
 }
