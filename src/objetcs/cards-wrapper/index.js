@@ -21,7 +21,10 @@ function createCardsWrapper() {
   $head.insertBefore($style, null);
 
   $cardsWrapper.addEventListener("click", event => {
-    console.log(event.target);
+    const $origin = event.target;
+
+    console.log("Origin:", $origin);
+    console.log("closest:", $origin.closest(".memory-card.-active"));
   });
 
   return $cardsWrapper;
