@@ -83,6 +83,15 @@ const handleClick = $component => {
     }
 
     if (qtdActiveMemoryCard === 1) {
+      const $memoryCards = document.querySelectorAll(".memory-card.-active");
+
+      if (
+        $memoryCards[0].querySelector(".-front .icon").getAttribute("src") ===
+        $memoryCards[1].querySelector(".-front .icon").getAttribute("src")
+      ) {
+        console.log("São iguais");
+      }
+
       setTimeout(() => {
         const $activeMemoryCards = document.querySelectorAll(
           ".memory-card.-active"
