@@ -77,21 +77,23 @@ function memoryCard() {
 }
 
 const handleClick = $component => {
-  if (qtdActiveMemoryCard < 2) {
-    $component.classList.toggle("-active");
-  }
+  if (!$component.classList.contains("-active")) {
+    if (qtdActiveMemoryCard < 2) {
+      $component.classList.toggle("-active");
+    }
 
-  if (qtdActiveMemoryCard === 1) {
-    setTimeout(() => {
-      const $activeMemoryCards = document.querySelectorAll(
-        ".memory-card.-active"
-      );
+    if (qtdActiveMemoryCard === 1) {
+      setTimeout(() => {
+        const $activeMemoryCards = document.querySelectorAll(
+          ".memory-card.-active"
+        );
 
-      $activeMemoryCards.forEach($memoryCard => {
-        $memoryCard.classList.remove("-active");
-      });
+        $activeMemoryCards.forEach($memoryCard => {
+          $memoryCard.classList.remove("-active");
+        });
 
-      qtdActiveMemoryCard = 0;
-    }, 1500);
+        qtdActiveMemoryCard = 0;
+      }, 1500);
+    }
   }
 };
