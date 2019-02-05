@@ -93,19 +93,19 @@ const handleClick = $component => {
         // score = score + 1;
         score++;
         console.log("Value score:", score);
+      } else {
+        setTimeout(() => {
+          const $activeMemoryCards = document.querySelectorAll(
+            ".memory-card.-active"
+          );
+
+          $activeMemoryCards.forEach($memoryCard => {
+            $memoryCard.classList.remove("-active");
+          });
+
+          qtdActiveMemoryCard = 0;
+        }, 1500);
       }
-
-      setTimeout(() => {
-        const $activeMemoryCards = document.querySelectorAll(
-          ".memory-card.-active"
-        );
-
-        $activeMemoryCards.forEach($memoryCard => {
-          $memoryCard.classList.remove("-active");
-        });
-
-        qtdActiveMemoryCard = 0;
-      }, 1500);
     }
   }
 };
