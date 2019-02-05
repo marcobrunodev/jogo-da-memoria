@@ -83,6 +83,8 @@ const handleClick = $component => {
       $component.classList.toggle("-active");
     }
 
+    console.log("Valor de qtdActiveMemoryCard:", qtdActiveMemoryCard);
+
     if (qtdActiveMemoryCard === 1) {
       const $memoryCards = document.querySelectorAll(".memory-card.-active");
 
@@ -93,6 +95,7 @@ const handleClick = $component => {
         // score = score + 1;
         score++;
         console.log("Value score:", score);
+        console.log("DENTRO");
       } else {
         setTimeout(() => {
           const $activeMemoryCards = document.querySelectorAll(
@@ -102,9 +105,8 @@ const handleClick = $component => {
           $activeMemoryCards.forEach($memoryCard => {
             $memoryCard.classList.remove("-active");
           });
-
-          qtdActiveMemoryCard = 0;
         }, 1500);
+        qtdActiveMemoryCard = 0;
       }
     }
   }
