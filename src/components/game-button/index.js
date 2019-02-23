@@ -28,13 +28,16 @@ const gameButton = (function() {
     $head.insertBefore($style, null);
   };
 
-  module.handleClick = () => console.log("FUNCIONOU!!!")
+  module.handleClick = $component => {
+    $component.remove();
+    document.querySelector(".transparency-layer").remove();
+  };
 
   module.render = () => {
     module._style();
 
     return `
-      <button class="game-button" onClick="gameButton.handleClick()">Start</button>
+      <button class="game-button" onClick="gameButton.handleClick(this)">Start</button>
     `;
   };
 
