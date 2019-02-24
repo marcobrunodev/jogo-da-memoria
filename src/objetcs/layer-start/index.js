@@ -1,7 +1,13 @@
 const layerStart = (function() {
   const module = {};
 
-  module.handleClick = $component => $component.remove();
+  module.handleClick = $component => {
+    const $gameButton = $component.querySelector(".game-button");
+    const $transparencyLayer = $component.querySelector(".transparency-layer");
+
+    $gameButton.classList.add("-disable");
+    $transparencyLayer.classList.add("-disable");
+  };
 
   module.render = content => {
     const $transparencyLayer = transparencyLayer.render();
