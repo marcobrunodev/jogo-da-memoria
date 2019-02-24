@@ -8,9 +8,15 @@ const layerStart = (function() {
     $gameButton.classList.add("-disable");
     $transparencyLayer.classList.add("-disable");
 
-    setTimeout(() => {
+    // setTimeout(() => {
+    //   $component.remove();
+    // }, 2300);
+  };
+
+  module.handleTransitionEnd = (event, $component) => {
+    if (event.target.classList.contains("transparency-layer")) {
       $component.remove();
-    }, 2300);
+    }
   };
 
   module.render = content => {
@@ -18,7 +24,7 @@ const layerStart = (function() {
     const $gameButton = gameButton.render(content);
 
     return `
-      <div class="layer-start" onClick="layerStart.handleClick(this)">
+      <div class="layer-start" onClick="layerStart.handleClick(this)" onTransitionEnd="layerStart.handleTransitionEnd(event, this)">
         ${$transparencyLayer}
         ${$gameButton}
       </div>
@@ -27,6 +33,7 @@ const layerStart = (function() {
 
   return {
     render: module.render,
-    handleClick: module.handleClick
+    handleClick: module.handleClick,
+    handleTransitionEnd: module.handleTransitionEnd
   };
 })();
