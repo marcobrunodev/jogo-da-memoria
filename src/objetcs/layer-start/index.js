@@ -7,6 +7,10 @@ const layerStart = (function() {
 
     $gameButton.classList.add("-disable");
     $transparencyLayer.classList.add("-disable");
+
+    setTimeout(() => {
+      $component.remove();
+    }, 2300);
   };
 
   module.render = content => {
