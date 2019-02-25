@@ -28,8 +28,6 @@ const gameButton = (function() {
 
       .game-button.-disable {
         opacity: 0;
-        
-        transform: scale(3) translateX(-50%);
       }
     `;
 
