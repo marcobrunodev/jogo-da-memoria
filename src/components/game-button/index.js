@@ -22,11 +22,14 @@ const gameButton = (function() {
         font-size: 1.05em;
         cursor: pointer;
         box-shadow: 0px 4px 8px #3a4042;
+        transform-origin: center;
         transition: opacity 300ms linear;
       }
 
       .game-button.-disable {
         opacity: 0;
+        
+        transform: scale(3) translateX(-50%);
       }
     `;
 
