@@ -1,9 +1,30 @@
 const flatButton = (function() {
   const module = {};
 
-  module.render = () => `
-    <button style="font-size: 40px;">Login</button>
-  `;
+  module._style = () => {
+    const $head = document.querySelector("head");
+    const $style = document.createElement("style");
+
+    $style.textContent = `
+      .flat-button {
+        background-color: #eae6da;
+        color: #fffcee;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        width: 186px;
+        height: 176px;
+      }
+    `;
+
+    $head.insertAdjacentElement("beforeend", $style);
+  };
+
+  module.render = () => {
+    module._style();
+
+    return `<button class="flat-button">Log in</button>`;
+  };
 
   return {
     render: module.render
