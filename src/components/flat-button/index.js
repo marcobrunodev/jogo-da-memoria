@@ -16,7 +16,6 @@ const flatButton = (function() {
         text-transform: uppercase;
       }
     `;
-
     $head.insertAdjacentElement("beforeend", $style);
   };
 
