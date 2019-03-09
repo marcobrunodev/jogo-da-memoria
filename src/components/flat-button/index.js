@@ -15,10 +15,6 @@ const flatButton = (function() {
         height: 176px;
         text-transform: uppercase;
       }
-      .flat-button.-active {
-        background-color: #f25a70;
-        color: #fff;
-      }
     `;
     $head.insertAdjacentElement("beforeend", $style);
   };
