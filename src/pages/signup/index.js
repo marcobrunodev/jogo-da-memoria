@@ -5,7 +5,17 @@
   const $signupButton = flatButton.render("Sign up", true);
   const $logoCollabcode = logoCollabcode.render();
   const $titleCollabcode = titleCollabcode.render("Welcome!");
-  const $logoWrapper = logoWrapper.render($logoCollabcode, $titleCollabcode);
+  const $logoWrapper = logoWrapper.render(
+    $logoCollabcode,
+    $titleCollabcode,
+    $titleCollabcode,
+    $titleCollabcode,
+    $titleCollabcode,
+    $titleCollabcode,
+    $titleCollabcode,
+    $titleCollabcode,
+    $logoCollabcode
+  );
 
   $root.insertAdjacentHTML("beforeend", $loginButton);
   $root.insertAdjacentHTML("beforeend", $signupButton);

@@ -1,10 +1,9 @@
 const logoWrapper = (function() {
   const module = {};
 
-  module.render = ($children1, $children2) => `
+  module.render = (...$children) => `
     <div class="avatarWrapper">
-      ${$children1} 
-      ${$children2}
+      ${$children.join("")} 
     </div>
   `;
 
