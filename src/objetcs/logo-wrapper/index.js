@@ -8,6 +8,7 @@ const logoWrapper = (function() {
     $style.textContent = `
       .avatar-wrapper {
         text-align: center;
+        transform: translateY(-25%);
       }
     `;
 
