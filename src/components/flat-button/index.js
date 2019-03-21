@@ -10,9 +10,8 @@ const flatButton = (function() {
     $style.textContent = `
       .flat-button-${module._id} {
         box-sizing: border-box;
-        display: inline-block;
-        text-decoration: none;
-        text-align: center;
+        display: inline-flex;
+        justify-content: center;
         background-color: ${active ? "#f25a70" : "#eae6da"};
         color: ${active ? "#fff" : "#fffcee"};
         font-size: 24px;
@@ -30,7 +29,7 @@ const flatButton = (function() {
     module._id++;
     module._style(active);
 
-    return `<a  href="#" class="flat-button-${module._id}">${content}</a>`;
+    return `<button class="flat-button-${module._id}">${content}</button>`;
   };
 
   return {
