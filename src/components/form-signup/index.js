@@ -28,6 +28,8 @@ const formSignup = (function() {
     const $confirmPasswordLabel = labelCollabcode.render("Confirm password");
     const $confirmPasswordInput = inputCollabcode.render();
 
+    const $btn = btnCollabcode.render("Signup");
+
     return `
       ${$emailLabel}
       ${$emailInput}
@@ -40,6 +42,8 @@ const formSignup = (function() {
 
       ${$confirmPasswordLabel}
       ${$confirmPasswordInput}
+
+      ${$btn}
     `;
   };
 
