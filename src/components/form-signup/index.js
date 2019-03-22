@@ -48,6 +48,7 @@ const formSignup = (function() {
 
   module.render = () => {
     module._style();
+
     return `<form class="form-signup" action="" method="POST">${module._children()}</form>`;
   };
 
