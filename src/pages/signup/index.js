@@ -13,6 +13,9 @@
   const $usernameLabel = labelCollabcode.render("Username");
   const $usernameInput = inputCollabcode.render();
 
+  const $passwordLabel = labelCollabcode.render("Password");
+  const $passwordInput = inputCollabcode.render();
+
   $root.insertAdjacentHTML("beforeend", $loginButton);
   $root.insertAdjacentHTML("beforeend", $signupButton);
   $root.insertAdjacentHTML("beforeend", $logoWrapper);
@@ -20,4 +23,6 @@
   $root.insertAdjacentHTML("beforeend", $usernameInput);
   $root.insertAdjacentHTML("beforeend", $emailLabel);
   $root.insertAdjacentHTML("beforeend", $emailInput);
+  $root.insertAdjacentHTML("beforeend", $passwordLabel);
+  $root.insertAdjacentHTML("beforeend", $passwordInput);
 })();
