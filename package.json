@@ -4,7 +4,7 @@
   "description": "Jogo da memória",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "live-server"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/MarcoBrunoBR/jogo-da-memoria/issues"
   },
-  "homepage": "https://github.com/MarcoBrunoBR/jogo-da-memoria#readme"
+  "homepage": "https://github.com/MarcoBrunoBR/jogo-da-memoria#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
