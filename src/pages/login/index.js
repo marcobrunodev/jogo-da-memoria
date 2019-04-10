@@ -1,5 +1,9 @@
 (function() {
   const $root = document.querySelector("#root");
 
-  $root.innerHTML = "<h1>FOI!!!</h1>";
+  const $loginButton = flatButton.render("Log in", true);
+  const $signupButton = flatButton.render("Sign up", false);
+
+  $root.insertAdjacentHTML("beforeend", $loginButton);
+  $root.insertAdjacentHTML("beforeend", $signupButton);
 })();
