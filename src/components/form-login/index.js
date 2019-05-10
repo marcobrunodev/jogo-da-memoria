@@ -25,6 +25,7 @@ const formLogin = (function() {
       placeholder: "*******",
       type: "password"
     });
+    const $eyeCollabcode = eyeCollabcode.render();
 
     const $linkCollab = linkCollab.render({
       href: "#",
@@ -39,6 +40,7 @@ const formLogin = (function() {
 
       ${$passwordLabel}
       ${$passwordInput}
+      ${$eyeCollabcode}
 
       ${$linkCollab}
 
