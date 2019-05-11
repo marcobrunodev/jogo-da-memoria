@@ -24,7 +24,11 @@ const inputCollabcode = (function() {
   module.render = ({ placeholder = "", type = "text" }) => {
     module._style();
 
-    return `<input class="input-collabcode" type="${type}" placeholder=${placeholder}>`;
+    return `<input
+              id="password" 
+              class="input-collabcode" 
+              type="${type}" 
+              placeholder=${placeholder}>`;
   };
 
   return {
