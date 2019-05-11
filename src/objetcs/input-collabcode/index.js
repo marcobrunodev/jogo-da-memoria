@@ -28,7 +28,7 @@ const inputCollabcode = (function() {
               id="${id}" 
               class="input-collabcode" 
               type="${type}" 
-              placeholder=${placeholder}>`;
+              placeholder="${placeholder}">`;
   };
 
   return {

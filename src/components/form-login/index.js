@@ -23,7 +23,7 @@ const formLogin = (function() {
     const $passwordLabel = labelCollabcode.render("Password");
     const $passwordInput = inputCollabcode.render({
       id: "password",
-      placeholder: "*******",
+      placeholder: "8 digite",
       type: "password"
     });
     const $eyeCollabcode = eyeCollabcode.render({attrFor: "password"});
