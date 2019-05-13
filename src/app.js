@@ -1,9 +1,8 @@
 (function () {
     const {hash} = window.location;
+    const paths = [];
+    paths[""] = login;
+    paths["#/signup"] = signup;
 
-    if (hash === "#/signup") {
-        signup();
-    } else {
-        login();
-    }
+    paths[hash]();
 })();
