@@ -20,6 +20,7 @@ const flatButton = (function() {
         padding-top: 60px;
         height: 176px;
         text-transform: uppercase;
+        cursor: pointer;
       }
     `;
     $head.insertAdjacentElement("beforeend", $style);
